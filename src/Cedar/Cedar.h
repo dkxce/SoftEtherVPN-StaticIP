@@ -129,7 +129,7 @@
 #define	CEDAR_VER					438
 
 // Build Number
-#define	CEDAR_BUILD					9760
+#define	CEDAR_BUILD					9762
 
 // Beta number
 //#define	BETA_NUMBER					3
@@ -139,21 +139,21 @@
 
 // Specify the name of the person in charge building
 #ifndef	BUILDER_NAME
-#define	BUILDER_NAME		"buildsan"
+#define	BUILDER_NAME		"dkxce"
 #endif	// BUILDER_NAME
 
 // Specify the location to build
 #ifndef	BUILD_PLACE
-#define	BUILD_PLACE			"crosswin"
+#define	BUILD_PLACE			"dkxce-firstone"
 #endif	// BUILD_PLACE
 
 // Specifies the build date
 #define	BUILD_DATE_Y		2021
-#define	BUILD_DATE_M		8
-#define	BUILD_DATE_D		17
-#define	BUILD_DATE_HO		22
-#define	BUILD_DATE_MI		14
-#define	BUILD_DATE_SE		6
+#define	BUILD_DATE_M		12
+#define	BUILD_DATE_D		22
+#define	BUILD_DATE_HO		14
+#define	BUILD_DATE_MI		53
+#define	BUILD_DATE_SE		43
 
 // Tolerable time difference
 #define	ALLOW_TIMESTAMP_DIFF		(UINT64)(3 * 24 * 60 * 60 * 1000)

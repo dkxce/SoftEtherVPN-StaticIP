@@ -447,6 +447,8 @@ void CancelList(LIST *o);
 bool CompareNodeInfo(NODE_INFO *a, NODE_INFO *b);
 bool IsPriorityHighestPacketForQoS(void *data, UINT size);
 UINT GetNextDelayedPacketTickDiff(SESSION *s);
+UINT PrepareDHCPRequestForStaticIPv4(SESSION *s, BLOCK *b);
+void ClearDHCPLeaseRecordForIPv4(SESSION *s, UINT static_ip);
 
 #endif	// SESSION_H
 

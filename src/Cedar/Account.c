@@ -1439,6 +1439,66 @@ int CompareUserName(void *p1, void *p2)
 	return StrCmpi(u1->Name, u2->Name);
 }
 
+// Get the static IPv4 address as user's name (login)
+UINT GetIPv4AddressFromUserName(char *name)
+{
+	UINT ip32 = 0;
+	TOKEN_LIST *tokens;
+	tokens = ParseToken(ipv4str2, " ,/()[]");
+	if (tokens != NULL)
+	{
+		if (tokens->NumTokens >= 1)
+		{
+			char *ipv4str = tokens->Token[0];
+			if (IsEmptyStr(ipv4str) == false)
+			{
+				ip32 = StrToIP32(ipv4str);
+			}
+		}
+
+		UniFreeToken(tokens);
+	}
+
+	return ip32;
+}
+
+// Get the static IPv4 address from the user's note string
+UINT GetUserIPv4AddressFromUserNote32(wchar_t *note)
+{
+	bool ret = false;
+	UINT ip32 = 0;
+
+	UINT i = UniSearchStrEx(note, USER_IPV4_STR_PREFIX, 0, false);
+	if (i != INFINITE)
+	{
+		wchar_t *ipv4str_start = &note[i + UniStrLen(USER_IPV4_STR_PREFIX)];
+		wchar_t ipv4str2[MAX_SIZE];
+		UNI_TOKEN_LIST *tokens;
+
+		UniStrCpy(ipv4str2, sizeof(ipv4str2), ipv4str_start);
+		UniTrim(ipv4str2);
+
+		tokens = UniParseToken(ipv4str2, L" ,/()[]");
+		if (tokens != NULL)
+		{
+			if (tokens->NumTokens >= 1)
+			{
+				wchar_t *ipv4str = tokens->Token[0];
+				if (UniIsEmptyStr(ipv4str) == false)
+				{
+					char ipv4str_a[MAX_SIZE];
+					UniToStr(ipv4str_a, sizeof(ipv4str_a), ipv4str);
+					ip32 = StrToIP32(ipv4str_a);
+				}
+			}
+
+			UniFreeToken(tokens);
+		}
+	}
+
+	return ip32;
+}
+
 // Get the MAC address from the user's note string
 bool GetUserMacAddressFromUserNote(UCHAR *mac, wchar_t *note)
 {

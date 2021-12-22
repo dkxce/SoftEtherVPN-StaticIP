@@ -106,6 +106,7 @@
 #define	ACCOUNT_H
 
 #define	USER_MAC_STR_PREFIX		L"MAC:"
+#define	USER_IPV4_STR_PREFIX	L"IPv4:"
 
 // Policy item
 struct POLICY_ITEM
@@ -306,6 +307,8 @@ void GetPolicyValueRangeStr(wchar_t *str, UINT size, UINT id);
 void FormatPolicyValue(wchar_t *str, UINT size, UINT id, UINT value);
 char *NormalizePolicyName(char *name);
 bool GetUserMacAddressFromUserNote(UCHAR *mac, wchar_t *note);
+UINT GetUserIPv4AddressFromUserNote32(wchar_t *note);
+UINT GetIPv4AddressFromUserName(char *name)
 
 
 #endif	// ACCOUNT_H
