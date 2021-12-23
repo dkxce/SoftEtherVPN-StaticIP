@@ -2,10 +2,10 @@
 
 ** Server
 
-	* Static IPv4 for users by User Name
+    * Static IPv4 for users by User Name
 
-		[vpnserver-with-static-IPs-L-x86.exe](vpnserver-with-static-IPs-L-x86.exe) - L Build (Login)
-		[vpnserver-with-static-IPs-L-x64.exe](vpnserver-with-static-IPs-L-x64.exe) - L Build (Login) 
+	[vpnserver-with-static-IPs-L-x86.exe](vpnserver-with-static-IPs-L-x86.exe) - L Build (Login)
+	[vpnserver-with-static-IPs-L-x64.exe](vpnserver-with-static-IPs-L-x64.exe) - L Build (Login) 
 		
 		How to set:
 			- Static IP can be set as user name (example: 10.0.0.1)   
@@ -17,10 +17,10 @@
 			4) Run SoftEther VPN Server (SEVPNSERVER) service
 			5) That's All	
 		
-	* Static IPv4 for users by User Note
+    * Static IPv4 for users by User Note
 
-		[vpnserver-with-static-IPs-N-x86.exe](vpnserver-with-static-IPs-N-x86.exe) - N Build (Note)
-		[vpnserver-with-static-IPs-N-x64.exe](vpnserver-with-static-IPs-N-x64.exe) - N Build (Note) 
+	[vpnserver-with-static-IPs-N-x86.exe](vpnserver-with-static-IPs-N-x86.exe) - N Build (Note)
+	[vpnserver-with-static-IPs-N-x64.exe](vpnserver-with-static-IPs-N-x64.exe) - N Build (Note) 
 		
 		How to set:
 			- Static IP can be set as user note (example: IPv4: 10.0.0.1) 
@@ -32,10 +32,10 @@
 			4) Run SoftEther VPN Server (SEVPNSERVER) service
 			5) That's All	
 
-	* Static IPv4 for users by User Name or User Note:
+    * Static IPv4 for users by User Name or User Note:
 		
-		[vpnserver-with-static-IPs-LN-x86.exe](vpnserver-with-static-IPs-LN-x86.exe) - LN Build (Login-Note)
-		[vpnserver-with-static-IPs-LN-x64.exe](vpnserver-with-static-IPs-LN-x64.exe) - LN Build (Login-Note) 
+	[vpnserver-with-static-IPs-LN-x86.exe](vpnserver-with-static-IPs-LN-x86.exe) - LN Build (Login-Note)
+	[vpnserver-with-static-IPs-LN-x64.exe](vpnserver-with-static-IPs-LN-x64.exe) - LN Build (Login-Note) 
 	
 		How to set:
 			- Static IP can be set as user name (example: 10.0.0.1)   
@@ -48,3 +48,8 @@
 			3) Replace original vpnserver.exe file in C:\Program Files\SoftEther VPN Server with selected from above
 			4) Run SoftEther VPN Server (SEVPNSERVER) service
 			5) That's All	
+			
+<img src="HOWTO_A.png" />   
+<img src="HOWTO_B.png" />   
+<img src="HOWTO_C.png" />   
+<img src="HOWTO_D.png" />   
