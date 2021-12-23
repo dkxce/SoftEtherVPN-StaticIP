@@ -1,31 +1,6 @@
-**SoftetherVPN Server v4.38 Build 9761** (Dec 23, 2021) by [Milok Zbrozek](https://github.com/dkxce) with predefined static IP (IPv4) for users
-
-## Changes and Features Added:
-* **Static IPv4 for users by User Name or User Note**
-
-SoftEther VPN (Stable Edition Repository)
-- An Open-Source Cross-platform Multi-protocol VPN Program
-https://www.softether.org/
-
-We use GitHub as the primary official SoftEther VPN repository:
-https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/
-
-Source code packages (.zip and .tar.gz) and binary files are also available:
-https://www.softether-download.com/
-
-We accept your patches by the acceptance policy:
-https://www.softether.org/5-download/src/9.patch
-
-Copyright (c) all contributors on SoftEther VPN project in GitHub.
-Copyright (c) Daiyuu Nobori, SoftEther Project at University of Tsukuba,
-and SoftEther Corporation.
-All rights reserved.
-
-The development of SoftEther VPN was supported by the MITOH Project,
-a research and development project by Japanese Government,
-subsidized by METI (Ministry of Economy, Trade and Industry of Japan),
-administrated by IPA (Information Promotion Agency, Japan).
-https://www.ipa.go.jp/english/humandev/
+SoftEther VPN (Stable Customized Repository)
+SoftetherVPN Server v4.38 Build 9761 (Dec 23, 2021) with predefined static IP (IPv4) for users
+- Added Static IPv4 for users by User Name or User Note
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -83,90 +58,6 @@ SOFTETHER VPN ADVANTAGES
   releasing the build.
 - More details at https://www.softether.org/.
 
-
-GETTING STARTED
----------------
-
-Visit the SoftEther VPN Project official web site at first:
-        https://www.softether.org/
-
-If you are not a developer, it is recommended to download the binary
-installers from:
-        https://www.softether-download.com/
-
-To build from the source,
-see "BUILD_UNIX.TXT" or "BUILD_WINDOWS.TXT" files.
-
-
-HOW TO DOWNLOAD THE LATEST SOURCE CODE PACKAGE
-----------------------------------------------
-
-Go to https://www.softether-download.com/ and you can find the latest
-source-code package file in both .ZIP and .TAR.GZ format.
-
-This is the easiest way to obtain the source code of SoftEther VPN.
-
-
-HOW TO GET THE LATEST SOURCE CODE TREE FOR DEVELOPERS
------------------------------------------------------
-
-If you are an open-source developer, visit our GitHub repository:
-https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/
-
-You can download the up-to-date source-code tree of SoftEther VPN
-from GitHub. You may make your own fork project from our project.
-
-The download and build instruction is following:
-
-$ git clone https://github.com/SoftEtherVPN/SoftEtherVPN_Stable.git
-$ cd SoftEtherVPN
-$ ./configure
-$ make
-$ make install
-
-
-TO CIRCUMVENT YOUR GOVERNMENT'S FIREWALL RESTRICTION
-----------------------------------------------------
-
-Because SoftEther VPN is overly strong tool to build a VPN tunnel,
-some censorship governments want to block your access to the source code
-of SoftEther VPN, by abusing their censorship firewalls.
-
-To circumvent your censor's unjust restriction,
-SoftEther VPN Project distributes the up-to-date source-code
-on all the following open-source repositories:
-
-  - GitHub
-    https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/
-
-To fetch the source code from GitHub:
-$ git clone https://github.com/SoftEtherVPN/SoftEtherVPN_Stable.git
-
-We hope that you can reach one of the above URLs at least!
-
-
-SOURCE CODE CONTRIBUTION
-------------------------
-
-Your contribution to SoftEther VPN Project is much appreciated.
-Please send patches to us through GitHub.
-Read the SoftEther VPN Patch Acceptance Policy in advance:
-https://www.softether.org/5-download/src/9.patch
-
-
-DEAR SECURITY EXPERTS
----------------------
-
-If you find a bug or a security vulnerability please kindly inform us
-about the problem immediately so that we can fix the security problem
-to protect a lot of users around the world as soon as possible.
-
-Our e-mail address for security reports is:
-softether-vpn-security [at] softether.org
-
-Please note that the above e-mail address is not a technical support
-inquiry address. If you need technical assistance, please visit
-https://www.softether.org/ and ask your question on the users forum.
 
 
 DISCLAIMER
