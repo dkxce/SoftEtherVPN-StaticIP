@@ -1444,7 +1444,7 @@ UINT GetIPv4AddressFromUserName(char *name)
 {
 	UINT ip32 = 0;
 	TOKEN_LIST *tokens;
-	tokens = ParseToken(ipv4str2, " ,/()[]");
+	tokens = ParseToken(name, " ,/()[]");
 	if (tokens != NULL)
 	{
 		if (tokens->NumTokens >= 1)
@@ -1456,7 +1456,7 @@ UINT GetIPv4AddressFromUserName(char *name)
 			}
 		}
 
-		UniFreeToken(tokens);
+		FreeToken(tokens);
 	}
 
 	return ip32;

@@ -1,0 +1,50 @@
+## Custom Builds
+
+** Server
+
+	* Static IPv4 for users by User Name
+
+		[vpnserver-with-static-IPs-L-x86.exe](vpnserver-with-static-IPs-L-x86.exe) - L Build (Login)
+		[vpnserver-with-static-IPs-L-x64.exe](vpnserver-with-static-IPs-L-x64.exe) - L Build (Login) 
+		
+		How to set:
+			- Static IP can be set as user name (example: 10.0.0.1)   
+		
+		How to use:
+			1) Install Original Softether VP Server
+			2) Stop SoftEther VPN Server (SEVPNSERVER) service
+			3) Replace original vpnserver.exe file in C:\Program Files\SoftEther VPN Server with selected from above
+			4) Run SoftEther VPN Server (SEVPNSERVER) service
+			5) That's All	
+		
+	* Static IPv4 for users by User Note
+
+		[vpnserver-with-static-IPs-N-x86.exe](vpnserver-with-static-IPs-N-x86.exe) - N Build (Note)
+		[vpnserver-with-static-IPs-N-x64.exe](vpnserver-with-static-IPs-N-x64.exe) - N Build (Note) 
+		
+		How to set:
+			- Static IP can be set as user note (example: IPv4: 10.0.0.1) 
+		
+		How to use:
+			1) Install Original Softether VP Server
+			2) Stop SoftEther VPN Server (SEVPNSERVER) service
+			3) Replace original vpnserver.exe file in C:\Program Files\SoftEther VPN Server with selected from above
+			4) Run SoftEther VPN Server (SEVPNSERVER) service
+			5) That's All	
+
+	* Static IPv4 for users by User Name or User Note:
+		
+		[vpnserver-with-static-IPs-LN-x86.exe](vpnserver-with-static-IPs-LN-x86.exe) - LN Build (Login-Note)
+		[vpnserver-with-static-IPs-LN-x64.exe](vpnserver-with-static-IPs-LN-x64.exe) - LN Build (Login-Note) 
+	
+		How to set:
+			- Static IP can be set as user name (example: 10.0.0.1)   
+			- Static IP can be set as user note (example: IPv4: 10.0.0.1) 
+			* IP sets from User Name, if User Name is not IP then try to set from User Note
+
+		How to use:
+			1) Install Original Softether VP Server
+			2) Stop SoftEther VPN Server (SEVPNSERVER) service
+			3) Replace original vpnserver.exe file in C:\Program Files\SoftEther VPN Server with selected from above
+			4) Run SoftEther VPN Server (SEVPNSERVER) service
+			5) That's All	

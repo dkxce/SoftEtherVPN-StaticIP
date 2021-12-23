@@ -10333,8 +10333,11 @@ PACKET_ADAPTER *VirtualGetPacketAdapter()
 		VirtualPaGetNextPacket, VirtualPaPutPacket, VirtualPaFree);
 }
 
+
 UINT ServeDhcpDiscoverEx(VH *v, UCHAR *mac, UINT request_ip, bool is_static_ip)
 {
+	DHCP_LEASE *d = NULL;
+
 	if (is_static_ip == false)
 	{
 		return ServeDhcpDiscover(v, mac, request_ip );
@@ -10345,7 +10348,7 @@ UINT ServeDhcpDiscoverEx(VH *v, UCHAR *mac, UINT request_ip, bool is_static_ip)
 		return 0;
 	}
 
-	DHCP_LEASE *d = SearchDhcpLeaseByIp(v, request_ip);
+	d = SearchDhcpLeaseByIp(v, request_ip);
 	if (d != NULL)
 	{
 		// The requested IP address is used already

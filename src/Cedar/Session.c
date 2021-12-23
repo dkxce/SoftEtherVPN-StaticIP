@@ -131,7 +131,7 @@ void SessionMain(SESSION *s)
 	bool is_server_session = false;
 	bool lock_receive_blocks_queue = false;
 	UINT static_ip = 0;
-	
+
 	// Validate arguments
 	if (s == NULL)
 	{
@@ -405,7 +405,7 @@ void SessionMain(SESSION *s)
 						// Remember the static IP address to remove it from the leased IP address list later
 						static_ip = ip;
 					}
-					
+
 					if (b->Buf[0] & 0x01)
 					{
 						if (is_server_session == false)
@@ -711,7 +711,7 @@ CLEANUP:
 
 		// Clear the DHCP lease record if assigned as a static client IP address
 		ClearDHCPLeaseRecordForIPv4(s, static_ip);
-		
+
 		DelSession(s->Hub, s);
 	}
 
@@ -2613,9 +2613,13 @@ CLEANUP_TP:
 	return ret_ip;
 }
 
+
 // release dhcp lease for static IP
 void ClearDHCPLeaseRecordForIPv4(SESSION *s, UINT static_ip)
 {
+	VH *v = NULL;
+	DHCP_LEASE *d = NULL;
+
 	if (s == NULL || static_ip == 0)
 	{
 		return;
@@ -2626,13 +2630,13 @@ void ClearDHCPLeaseRecordForIPv4(SESSION *s, UINT static_ip)
 		return;
 	}
 
-	VH *v = s->Hub->SecureNAT->Nat->Virtual;
+	v = s->Hub->SecureNAT->Nat->Virtual;
 	if (v == NULL || v->DhcpLeaseList == NULL)
 	{
 		return;
 	}
 
-	DHCP_LEASE *d = SearchDhcpLeaseByIp(v, static_ip);
+	d = SearchDhcpLeaseByIp(v, static_ip);
 	if (d == NULL)
 	{
 		return;
