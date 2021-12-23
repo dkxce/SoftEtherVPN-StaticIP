@@ -55,7 +55,7 @@
 		How to set:
 			- Static IP can be set as user name (example: 10.0.0.1)   
 			- Static IP can be set as user note (example: IPv4: 10.0.0.1) 
-			* IP sets from User Note, if User Note is empty IP will try to set from User Note
+			* IP sets from User Note, if User Note is empty IP will try to set from User Name
 
 		How to use:
 			1) Install Original Softether VP Server
