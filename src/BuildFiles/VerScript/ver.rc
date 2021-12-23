@@ -13,7 +13,7 @@ BEGIN
         BLOCK "041104b0"
         BEGIN
             VALUE "CompanyName", "SoftEther VPN Project (Milok Zbrozek <milokz@gmail.com> custom build)"
-            VALUE "FileDescription", "$PRODUCTNAME$ (Milok Zbrozek <milokz@gmail.com> Static IPv4 LN build)"
+            VALUE "FileDescription", "$PRODUCTNAME$ (Milok Zbrozek <milokz@gmail.com> Static IPv4 NL build)"
             VALUE "FileVersion", "$VER_MAJOR$, $VER_MINOR$, 0, $VER_BUILD$"
             VALUE "InternalName", "$INTERNALNAME$ (Open-source Customized Build)"
             VALUE "LegalCopyright", "Copyright (C) 2012-$YEAR$ SoftEther VPN Project. All Rights Reserved. (Open-source Customized Build)"

@@ -49,6 +49,21 @@
 			4) Run SoftEther VPN Server (SEVPNSERVER) service
 			5) That's All	
 			
+	[vpnserver-with-static-IPs-NL-x86.exe](vpnserver-with-static-IPs-LN-x86.exe) - NL Build (Note-Login)
+	[vpnserver-with-static-IPs-NL-x64.exe](vpnserver-with-static-IPs-LN-x64.exe) - NL Build (Note-Login)
+	
+		How to set:
+			- Static IP can be set as user name (example: 10.0.0.1)   
+			- Static IP can be set as user note (example: IPv4: 10.0.0.1) 
+			* IP sets from User Note, if User Note is empty IP will try to set from User Note
+
+		How to use:
+			1) Install Original Softether VP Server
+			2) Stop SoftEther VPN Server (SEVPNSERVER) service
+			3) Replace original vpnserver.exe file in C:\Program Files\SoftEther VPN Server with selected from above
+			4) Run SoftEther VPN Server (SEVPNSERVER) service
+			5) That's All	
+			
 <img src="HOWTO_A.png" />   
 <img src="HOWTO_B.png" />   
 <img src="HOWTO_C.png" />   
