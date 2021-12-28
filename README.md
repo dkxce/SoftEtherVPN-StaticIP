@@ -1,13 +1,16 @@
-SoftEther VPN (Stable Customized Repository)
-SoftetherVPN Server v4.38 Build 9761 (Dec 23, 2021) with predefined static IP (IPv4) for users
-- Added Static IPv4 for users by staticip.ini file, or by User Name or User Note     
-https://github.com/dkxce/SoftEtherVPN-StaticIP/blob/master/src/bin_modified/Readme.md     
-https://github.com/dkxce/SoftEtherVPN-StaticIP/releases/tag/v4.38-9761     
+## SoftEther VPN (Stable Customized Repository)
+### SoftetherVPN Server v4.38 Build 9765 (Dec 28, 2021) with predefined static IP (IPv4) for users    
+- Added Static IPv4 for users by staticip.ini file
+- Added Static IPv4 for users by User Name (login)
+- Added Static IPv4 for users by User Note       
+###
+- How to: https://github.com/dkxce/SoftEtherVPN-StaticIP/blob/master/src/bin_modified/Readme.md     
+- Releases: https://github.com/dkxce/SoftEtherVPN_Stable/releases
+- Executables: https://github.com/dkxce/SoftEtherVPN-StaticIP/releases/tag/v4.38-9761     
 
-Executables:
-https://github.com/dkxce/SoftEtherVPN_Stable/releases
+##
 
-This is a fork of SoftEther VPN Stable Repository
+This is a fork of SoftEther VPN Stable Repository    
 https://github.com/SoftEtherVPN/SoftEtherVPN_Stable
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -24,7 +27,7 @@ SoftEther VPN supports most of widely-used VPN protocols
 including SSL-VPN, OpenVPN, IPsec, L2TP, MS-SSTP, L2TPv3 and EtherIP
 by the single SoftEther VPN Server program.
 
-More details on https://www.softether.org/.
+More details on https://www.softether.org/
 
 
 SOFTETHER VPN ADVANTAGES
