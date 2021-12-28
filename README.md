@@ -1,8 +1,8 @@
 SoftEther VPN (Stable Customized Repository)
 SoftetherVPN Server v4.38 Build 9761 (Dec 23, 2021) with predefined static IP (IPv4) for users
-- Added Static IPv4 for users by staticip.ini file, or by User Name or User Note
-https://github.com/dkxce/SoftEtherVPN-StaticIP/blob/master/src/bin_modified/Readme.md
-https://github.com/dkxce/SoftEtherVPN-StaticIP/releases/tag/v4.38-9761
+- Added Static IPv4 for users by staticip.ini file, or by User Name or User Note     
+https://github.com/dkxce/SoftEtherVPN-StaticIP/blob/master/src/bin_modified/Readme.md     
+https://github.com/dkxce/SoftEtherVPN-StaticIP/releases/tag/v4.38-9761     
 
 Executables:
 https://github.com/dkxce/SoftEtherVPN_Stable/releases
