@@ -1,5 +1,5 @@
 ## SoftEther VPN (Stable Customized Repository)
-### SoftetherVPN Server v4.38 Build 9765 (Dec 28, 2021) with predefined static IP (IPv4) for users    
+### SoftetherVPN Server v4.38 Build 9765 (Dec 28, 2021) with predefined static IP (IPv4) for Clients    
 - Added Static IPv4 for users by staticip.ini file
 - Added Static IPv4 for users by User Name (login)
 - Added Static IPv4 for users by User Note       
