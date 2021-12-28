@@ -1,32 +1,3 @@
-SoftEther VPN (Stable Edition Repository)
-- An Open-Source Cross-platform Multi-protocol VPN Program
-https://www.softether.org/
-
-We use GitHub as the primary official SoftEther VPN repository:
-https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/
-
-This branch is officially managed by Daiyuu Nobori, the owner of
-SoftEther VPN Project. Pull requests should be sent to the
-Developer Edition Master Repository on
-https://github.com/SoftEtherVPN/SoftEtherVPN
-
-Source code packages (.zip and .tar.gz) and binary files are also available:
-https://www.softether-download.com/
-
-We accept your patches by the acceptance policy:
-https://www.softether.org/5-download/src/9.patch
-
-Copyright (c) all contributors on SoftEther VPN project in GitHub.
-Copyright (c) Daiyuu Nobori, SoftEther Project at University of Tsukuba,
-and SoftEther Corporation.
-All rights reserved.
-
-The development of SoftEther VPN was supported by the MITOH Project,
-a research and development project by Japanese Government,
-subsidized by METI (Ministry of Economy, Trade and Industry of Japan),
-administrated by IPA (Information Promotion Agency, Japan).
-https://www.ipa.go.jp/english/humandev/
-
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at:
