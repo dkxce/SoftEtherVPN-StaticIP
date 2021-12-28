@@ -4,9 +4,10 @@
 - Added Static IPv4 for users by User Name (login)
 - Added Static IPv4 for users by User Note       
 ###
-- How to: https://github.com/dkxce/SoftEtherVPN-StaticIP/blob/master/src/bin_modified/Readme.md     
-- Releases: https://github.com/dkxce/SoftEtherVPN_Stable/releases
-- Executables: https://github.com/dkxce/SoftEtherVPN-StaticIP/releases/tag/v4.38-9761     
+- [What is it & How to](https://github.com/dkxce/SoftEtherVPN-StaticIP/blob/master/src/bin_modified/Readme.md)     
+- [Help & Executables](https://github.com/dkxce/SoftEtherVPN-StaticIP/releases/tag/v4.38-9761)     
+- [Last Releases](https://github.com/dkxce/SoftEtherVPN_Stable/releases)
+- [Sources](https://github.com/dkxce/SoftEtherVPN-StaticIP/tree/master/src)
 
 ##
 
