@@ -150,6 +150,9 @@ POLICY_ITEM policy_item[] =
 	{37,	true,	true,	1,	4095,	0,	"POL_INT_VLAN"},	// VLanId
 };
 
+void *iplist[2048]; // Max 1024 Records
+int iplen = -1;     // iplist count (-1 - not loaded)
+
 // Normalize policy name
 char *NormalizePolicyName(char *name)
 {
@@ -1439,11 +1442,113 @@ int CompareUserName(void *p1, void *p2)
 	return StrCmpi(u1->Name, u2->Name);
 }
 
+// Get StaticIP From File: userName=10.0.0.1
+UINT GetIPv4AddressFromFile(char *name)
+{	
+	if(iplen >= 0) // IPList in memory (max 1024 records)
+	{
+		int i;
+		for(i = 0; i < iplen; i += 2) // even - user login/name as char*; odd - user IPv4 as UINT*
+		{
+			char *v = (char*)iplist[i];
+			UINT *a = (UINT*)iplist[i + 1];
+			if(StrCmp(name,v) == 0)
+			{
+				return *a;
+			}
+		}
+		return 0;
+	}
+	else // First Run
+	{
+		char *file_data = ZeroMalloc(1048576);
+		IO *file;
+		UINT fs;
+		TOKEN_LIST *tokens;
+		TOKEN_LIST *t2;
+		UINT rip = 0;
+
+		char exe_dir[MAX_PATH], full_path[MAX_PATH];
+		GetExeDir(exe_dir, sizeof(exe_dir));
+		Format(full_path, sizeof(full_path), "%s/%s", exe_dir, "staticip.ini");
+
+		file = FileOpenEx(full_path, false, false);
+		fs = FileSize(file);
+		FileRead(file, file_data, fs);
+		FileClose(file);
+
+		Trim(file_data);
+		iplen = 0;
+		
+		tokens = ParseToken(file_data, L"\n\r");
+		Free(file_data);
+
+		if (tokens != NULL)
+		{
+			if (tokens->NumTokens >= 1)
+			{				
+				int i;
+				for(i = 0; i< tokens->NumTokens;i++)
+				{				
+					char *ipv4str = tokens->Token[i];	
+					Trim(ipv4str);
+
+					if(StartWith(ipv4str, "[")) continue;
+					if(StartWith(ipv4str, ";")) continue;
+					if(StartWith(ipv4str, "'")) continue;
+
+					t2 = ParseToken(ipv4str, L"=\r\n");
+					if (t2 != NULL)
+					{
+						if (t2->NumTokens >= 2)
+						{
+							int ic = 0;
+							char *login = t2->Token[0];
+							char *ip = t2->Token[1];
+							Trim(login);
+							Trim(ip);
+							if(iplen < 1024) // load to iplist
+							{
+								char *l = Malloc(strlen(login) + 1);							
+								UINT *u = Malloc(sizeof(UINT));							
+								UINT cip;
+
+								cip = StrToIP32(ip);
+								memcpy(l,login,strlen(login) + 1);
+								memcpy(u,&cip,sizeof(UINT));
+								
+								iplist[iplen++] = l;
+								iplist[iplen++] = u;
+							}
+							ic = StrCmp(name,login);
+							if(ic == 0) // find retur result
+							{																				
+								rip = StrToIP32(ip);
+							}
+						}
+						FreeToken(t2);
+					}
+				}
+			}
+			FreeToken(tokens);
+		}
+
+		return rip;	
+	};
+}
+
+// Get StaticIP From File: userName=10.0.0.1
+bool GetIPv4AddressFromFileSpecified()
+{
+	return iplen > 0;
+}
+
 // Get the static IPv4 address as user's name (login)
 UINT GetIPv4AddressFromUserName(char *name)
 {
 	UINT ip32 = 0;
 	TOKEN_LIST *tokens;
+	
 	tokens = ParseToken(name, " ,/()[]");
 	if (tokens != NULL)
 	{

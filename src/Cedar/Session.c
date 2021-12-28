@@ -2574,10 +2574,14 @@ UINT PrepareDHCPRequestForStaticIPv4(SESSION *s, BLOCK *b)
 				user = AcGetUser( s->Hub, s->Username );
 				if (user != NULL)
 				{
-					dhcp->ServerIP = GetUserIPv4AddressFromUserNote32(user->Note);
-					if(dhcp->ServerIP == 0)
+					dhcp->ServerIP = GetIPv4AddressFromFile(user->Name);
+					if(!GetIPv4AddressFromFileSpecified())
 					{
-						dhcp->ServerIP = GetIPv4AddressFromUserName(user->Name);
+						dhcp->ServerIP = GetUserIPv4AddressFromUserNote32(user->Note);
+						if(dhcp->ServerIP == 0)
+						{
+							dhcp->ServerIP = GetIPv4AddressFromUserName(user->Name);
+						}
 					}
 					ReleaseUser(user);
 					if (s->Hub->SecureNAT != NULL && s->Hub->SecureNAT->Nat != NULL)
