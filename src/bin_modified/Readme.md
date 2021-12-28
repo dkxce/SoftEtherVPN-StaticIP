@@ -76,11 +76,12 @@
 			* IP sets from staticip.ini file; if file has no records or empty - ip will set from from User Note, then from User Name
 
 		How to use:
-			1) Install Original Softether VP Server
-			2) Stop SoftEther VPN Server (SEVPNSERVER) service
-			3) Replace original vpnserver.exe file in C:\Program Files\SoftEther VPN Server with selected from above
-			4) Run SoftEther VPN Server (SEVPNSERVER) service
-			5) That's All	
+			1) Install Original Softether VP Server (v4.38-9760, link below)
+  			2) Stop SoftEther VPN Server (SEVPNSERVER) service
+  			3) Replace original vpnserver.exe file in C:\Program Files\SoftEther VPN Server with selected from above
+  			4) Copy staticip.ini to C:\Program Files\SoftEther VPN Server folder and edit records in it
+  			5) Run SoftEther VPN Server (SEVPNSERVER) service
+  			6) That's All	
 			
 <img src="HOWTO_A.png" />   
 <img src="HOWTO_B.png" />   
