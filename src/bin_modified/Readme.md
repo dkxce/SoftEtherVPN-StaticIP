@@ -1,6 +1,6 @@
 ## Custom Build (Server) with Static IP for Clients
 
-**SoftetherVPN Server v4.38 Build 9765** (Dec 28, 2021) by [Milok Zbrozek](https://github.com/dkxce) with predefined static IP (IPv4) for users - **rtm stable**
+**SoftetherVPN Server v4.38 Build 9765** (Dec 28, 2021) by [dkxce](https://github.com/dkxce) with predefined static IP (IPv4) for users - **rtm stable**
 
 Build with MSVS 2008 SP1 on XP win32 for Windows OS    
 Tested on XP, Vista, Windows Server 2003 & Windows 10    
